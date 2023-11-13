@@ -8,18 +8,19 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Vector2 moveVelocity;
     private Rigidbody2D rb;
-    //private SpriteRenderer spriteRenderer;
+    public GameObject inventoryPanel;
+    private bool isOpenInventory = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //spriteRenderer = GetComponent<SpriteRenderer>();
+        inventoryPanel.SetActive(false);
     }
 
     void Update()
     {
         HandleMovement();
-        //FlipSprite();
+        Inventory();
     }
 
     void HandleMovement()
@@ -33,15 +34,23 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
 
-    //void FlipSprite()
-    //{
-    //    if (moveInput.x > 0)
-    //    {
-    //        spriteRenderer.flipX = false; // Facing right
-    //    }
-    //    else if (moveInput.x < 0)
-    //    {
-    //        spriteRenderer.flipX = true; // Facing left
-    //    }
-    //}
+    void Inventory()
+    {
+        if (isOpenInventory == true)
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventoryPanel.SetActive(false);
+                isOpenInventory = false;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                inventoryPanel.SetActive(true);
+                isOpenInventory = true;
+            }
+        }
+    }
 }
