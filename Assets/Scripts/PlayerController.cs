@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour
     public GameObject inventoryPanel;
     private bool isOpenInventory = false;
 
+    public AudioSource Walking;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         inventoryPanel.SetActive(false);
+        Walking = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * moveSpeed;
+        Walking.Play();
     }
 
     void FixedUpdate()
