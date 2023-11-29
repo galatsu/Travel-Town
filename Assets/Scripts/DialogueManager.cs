@@ -29,9 +29,14 @@ public class DialogueManager : MonoBehaviour
     private int nextNodeIndex = 0;
     public List<DialogueNode> dialogueNodes;
 
+    private AudioSource Talking;
+
+
     void Start()
     {
         HideDialoguePanel();
+        Talking = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -41,11 +46,17 @@ public class DialogueManager : MonoBehaviour
             waitingForUserInput = false;
             ShowDialogue(nextNodeIndex);
         }
-    }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            ShowDialogue(nextNodeIndex);
 
+        }
+    }
+    
     public void ShowDialogue(int nodeIndex)
     {
         DialogueNode node = dialogueNodes[nodeIndex];
+        Talking.Play();
 
         if (node.isFinalNode)
         {
