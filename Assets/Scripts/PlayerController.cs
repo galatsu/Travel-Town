@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveVelocity;
     private Rigidbody2D rb;
     public GameObject inventoryPanel;
+    public GameObject cashObject;
     private bool isOpenInventory = false;
+
+    public DialogueManager dialogueManager;
 
     void Start()
     {
@@ -21,6 +24,15 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         Inventory();
+
+        if (dialogueManager.isReceivedCash && isOpenInventory)
+        {
+            cashObject.SetActive(true);
+        }
+        else
+        {
+            cashObject.SetActive(false);
+        }
     }
 
     void HandleMovement()

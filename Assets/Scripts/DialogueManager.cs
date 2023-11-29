@@ -9,16 +9,19 @@ public class DialogueNode
 {
     public string speakerName;
     public Sprite characterSprite;
+    public Sprite dialogueBG;
     public string dialogueText;
     public List<string> choices;
     public List<int> nextNode;
     public bool hasChoices;
     public bool isFinalNode;
+    public bool isReceivedCash;
 }
 
 public class DialogueManager : MonoBehaviour
 {
     public Image characterImage;
+    public Image dialogueBG;
     public TextMeshProUGUI speakerNameText;
     public TextMeshProUGUI dialogueText; // Use Text if not using TextMeshPro
     public GameObject[] choiceButtons; // An array of choice buttons
@@ -28,6 +31,11 @@ public class DialogueManager : MonoBehaviour
     private bool waitingForUserInput = false;
     private int nextNodeIndex = 0;
     public List<DialogueNode> dialogueNodes;
+
+    public bool isReceivedCash = false;
+
+    public Image fadeOverlay;
+    public float fadeDuration = 1.0f;
 
     void Start()
     {
@@ -57,6 +65,8 @@ public class DialogueManager : MonoBehaviour
 
             speakerNameText.text = node.speakerName;
             characterImage.sprite = node.characterSprite;
+            dialogueBG.sprite = node.dialogueBG;
+
 
             StopAllCoroutines(); // Stop previous typewriter effects if any
             StartCoroutine(TypeSentence(node.dialogueText));
@@ -98,6 +108,11 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         }
+
+        if(node.isReceivedCash)
+        {
+            isReceivedCash = true;
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -113,7 +128,39 @@ public class DialogueManager : MonoBehaviour
     IEnumerator ClosePanelAfterDialogue(string sentence)
     {
         yield return StartCoroutine(TypeSentence(sentence));
+
+        yield return StartCoroutine(FadeIn(fadeOverlay, fadeDuration));
+
         HideDialoguePanel();
+
+        // Fade out after closing the panel
+        yield return StartCoroutine(FadeOut(fadeOverlay, fadeDuration));
+    }
+
+    IEnumerator FadeIn(Image image, float duration)
+    {
+        float elapsedTime = 0;
+        Color color = image.color;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            color.a = Mathf.Clamp01(elapsedTime / duration);
+            image.color = color;
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeOut(Image image, float duration)
+    {
+        float elapsedTime = 0;
+        Color color = image.color;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            color.a = Mathf.Clamp01(1 - (elapsedTime / duration));
+            image.color = color;
+            yield return null;
+        }
     }
 
     void HideDialoguePanel()
