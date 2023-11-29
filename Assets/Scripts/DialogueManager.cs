@@ -16,6 +16,7 @@ public class DialogueNode
     public bool hasChoices;
     public bool isFinalNode;
     public bool isReceivedCash;
+    public AudioClip typingSound;
 }
 
 public class DialogueManager : MonoBehaviour
@@ -37,6 +38,8 @@ public class DialogueManager : MonoBehaviour
     public Image fadeOverlay;
     public float fadeDuration = 1.0f;
 
+    public AudioSource audioSource;
+
     void Start()
     {
         HideDialoguePanel();
@@ -57,7 +60,7 @@ public class DialogueManager : MonoBehaviour
 
         if (node.isFinalNode)
         {
-            StartCoroutine(ClosePanelAfterDialogue(node.dialogueText));
+            StartCoroutine(ClosePanelAfterDialogue(node.dialogueText, node.typingSound));
         }
         else
         {
@@ -67,9 +70,8 @@ public class DialogueManager : MonoBehaviour
             characterImage.sprite = node.characterSprite;
             dialogueBG.sprite = node.dialogueBG;
 
-
-            StopAllCoroutines(); // Stop previous typewriter effects if any
-            StartCoroutine(TypeSentence(node.dialogueText));
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(node.dialogueText, node.typingSound));
 
             if (node.hasChoices)
             {
@@ -109,15 +111,22 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        if(node.isReceivedCash)
+        if (node.isReceivedCash)
         {
-            isReceivedCash = true;
+            isReceivedCash = true; // Handle cash received logic
         }
+
+        // Additional handling for item interaction (if needed)
     }
 
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(string sentence, AudioClip typingSound)
     {
         dialogueText.text = "";
+        if (typingSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(typingSound);
+        }
+
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
@@ -125,9 +134,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    IEnumerator ClosePanelAfterDialogue(string sentence)
+    IEnumerator ClosePanelAfterDialogue(string sentence, AudioClip typingSound)
     {
-        yield return StartCoroutine(TypeSentence(sentence));
+        yield return StartCoroutine(TypeSentence(sentence, typingSound));
 
         yield return StartCoroutine(FadeIn(fadeOverlay, fadeDuration));
 

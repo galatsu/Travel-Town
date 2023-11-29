@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mayor : MonoBehaviour
+public class NPC : MonoBehaviour
 {
     public DialogueManager dialogueManager;
     public Transform player;
     public float activationDistance = 3.0f;
     private bool dialogueTriggered = false;
-    public Image fadeOverlay; // Reference to the fade overlay image
-    public float fadeDuration = 1.0f; // Duration of the fade effect
+    public Image fadeOverlay;
+    public float fadeDuration = 1.0f;
+    public int dialogueIndex = 0;
 
     // Update is called once per frame
     void Update()
@@ -27,7 +28,7 @@ public class Mayor : MonoBehaviour
         yield return StartCoroutine(FadeIn(fadeOverlay, fadeDuration));
 
         // Show dialogue
-        dialogueManager.ShowDialogue(0);
+        dialogueManager.ShowDialogue(dialogueIndex);
         dialogueTriggered = true;
 
         // Fade out
