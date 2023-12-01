@@ -17,6 +17,7 @@ public class DialogueNode
     public bool isFinalNode;
     public bool isReceivedCash;
     public AudioClip typingSound;
+    public int soundInterval = 4;
 }
 
 public class DialogueManager : MonoBehaviour
@@ -60,7 +61,7 @@ public class DialogueManager : MonoBehaviour
 
         if (node.isFinalNode)
         {
-            StartCoroutine(ClosePanelAfterDialogue(node.dialogueText, node.typingSound));
+            StartCoroutine(ClosePanelAfterDialogue(node.dialogueText, node.typingSound, node.soundInterval));
         }
         else
         {
@@ -71,7 +72,7 @@ public class DialogueManager : MonoBehaviour
             dialogueBG.sprite = node.dialogueBG;
 
             StopAllCoroutines();
-            StartCoroutine(TypeSentence(node.dialogueText, node.typingSound));
+            StartCoroutine(TypeSentence(node.dialogueText, node.typingSound, node.soundInterval));
 
             if (node.hasChoices)
             {
@@ -119,24 +120,28 @@ public class DialogueManager : MonoBehaviour
         // Additional handling for item interaction (if needed)
     }
 
-    IEnumerator TypeSentence(string sentence, AudioClip typingSound)
+    IEnumerator TypeSentence(string sentence, AudioClip typingSound, int soundInterval)
     {
         dialogueText.text = "";
-        if (typingSound != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(typingSound);
-        }
+        int characterCount = 0;
 
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
+            characterCount++;
+
+            // Play the sound at specified intervals
+            if (characterCount % soundInterval == 0 && typingSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(typingSound);
+            }
             yield return new WaitForSeconds(typingSpeed);
         }
     }
 
-    IEnumerator ClosePanelAfterDialogue(string sentence, AudioClip typingSound)
+    IEnumerator ClosePanelAfterDialogue(string sentence, AudioClip typingSound, int soundInterval)
     {
-        yield return StartCoroutine(TypeSentence(sentence, typingSound));
+        yield return StartCoroutine(TypeSentence(sentence, typingSound, soundInterval));
 
         yield return StartCoroutine(FadeIn(fadeOverlay, fadeDuration));
 
