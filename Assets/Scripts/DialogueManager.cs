@@ -5,9 +5,17 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
+public class DialogueRequirement
+{
+    public string requirement; // Requirement identifier
+    public int nextNodeIndex; // Corresponding next node index if the requirement is met
+}
+
+[System.Serializable]
 public class DialogueNode
 {
     public string speakerName;
+    public Sprite MCSprite;
     public Sprite characterSprite;
     public Sprite dialogueBG;
     public string dialogueText;
@@ -16,12 +24,16 @@ public class DialogueNode
     public bool hasChoices;
     public bool isFinalNode;
     public bool isReceivedCash;
+    public bool isReceivedFish;
     public AudioClip typingSound;
     public int soundInterval = 4;
+
+    public List<DialogueRequirement> requirements = new List<DialogueRequirement>();
 }
 
 public class DialogueManager : MonoBehaviour
 {
+    public Image MCImage;
     public Image characterImage;
     public Image dialogueBG;
     public TextMeshProUGUI speakerNameText;
@@ -35,6 +47,7 @@ public class DialogueManager : MonoBehaviour
     public List<DialogueNode> dialogueNodes;
 
     public bool isReceivedCash = false;
+    public bool isReceivedFish = false;
 
     public Image fadeOverlay;
     public float fadeDuration = 1.0f;
@@ -59,6 +72,8 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueNode node = dialogueNodes[nodeIndex];
 
+        int nextNodeToUse = GetNextNodeIndexBasedOnRequirements(node);
+
         if (node.isFinalNode)
         {
             StartCoroutine(ClosePanelAfterDialogue(node.dialogueText, node.typingSound, node.soundInterval));
@@ -68,6 +83,7 @@ public class DialogueManager : MonoBehaviour
             ShowDialoguePanel();
 
             speakerNameText.text = node.speakerName;
+            MCImage.sprite = node.MCSprite;
             characterImage.sprite = node.characterSprite;
             dialogueBG.sprite = node.dialogueBG;
 
@@ -102,7 +118,7 @@ public class DialogueManager : MonoBehaviour
                 if (node.nextNode.Count > 0)
                 {
                     waitingForUserInput = true;
-                    nextNodeIndex = node.nextNode[0];
+                    nextNodeIndex = nextNodeToUse;
                 }
                 else
                 {
@@ -116,8 +132,39 @@ public class DialogueManager : MonoBehaviour
         {
             isReceivedCash = true; // Handle cash received logic
         }
+        if (node.isReceivedFish)
+        {
+            isReceivedFish = true;
+        }
 
         // Additional handling for item interaction (if needed)
+    }
+
+    private int GetNextNodeIndexBasedOnRequirements(DialogueNode node)
+    {
+        foreach (var requirement in node.requirements)
+        {
+            if (CheckRequirement(requirement.requirement))
+            {
+                return requirement.nextNodeIndex;
+            }
+        }
+
+        return node.nextNode.Count > 0 ? node.nextNode[0] : -1; // Default or error case
+    }
+
+    private bool CheckRequirement(string requirement)
+    {
+        switch (requirement)
+        {
+            case "isHasCash":
+                return isReceivedCash;
+            case "isHasFish":
+                return isReceivedFish;
+            default:
+                Debug.LogWarning("Unknown requirement: " + requirement);
+                return false;
+        }
     }
 
     IEnumerator TypeSentence(string sentence, AudioClip typingSound, int soundInterval)
