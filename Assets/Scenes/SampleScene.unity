@@ -974,7 +974,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.35
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1262,6 +1262,7 @@ GameObject:
   - component: {fileID: 696321359}
   - component: {fileID: 696321358}
   - component: {fileID: 696321361}
+  - component: {fileID: 696321362}
   m_Layer: 0
   m_Name: Mayor
   m_TagString: Untagged
@@ -1305,14 +1306,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.24, y: 7.6}
+    oldSize: {x: 2.37, y: 3.06}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.24, y: 7.6}
+  m_Size: {x: 2.37, y: 3.06}
   m_EdgeRadius: 0
 --- !u!212 &696321359
 SpriteRenderer:
@@ -1355,7 +1356,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+  m_Sprite: {fileID: -36961239, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1375,8 +1376,8 @@ Transform:
   m_GameObject: {fileID: 696321357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.08, y: -1.37, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: -2.21, y: -4.15, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1395,10 +1396,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1979688437}
   player: {fileID: 1713406337}
-  activationDistance: 2
+  activationDistance: 1
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   dialogueIndex: 0
+--- !u!114 &696321362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696321357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cdf33ae6ca4ce48ba867c7edf9ed9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enlargedScale: {x: 1.1, y: 1.1, z: 1.1}
+  normalSprite: {fileID: -36961239, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
+  hoverSprite: {fileID: -1236830882, guid: b39e7fb4f03aab04ba533565443a8584, type: 3}
 --- !u!1 &1023664744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,7 +2505,7 @@ GameObject:
   - component: {fileID: 1713406342}
   - component: {fileID: 1713406343}
   m_Layer: 0
-  m_Name: Traveling Merchant
+  m_Name: MC
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2548,7 +2564,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.37, y: -3.32, z: 0.061691772}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2653,21 +2669,21 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.75, y: 9.1}
+    oldSize: {x: 3.17, y: 2.17}
     newSize: {x: 5.75, y: 9.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.75, y: 9.1}
+  m_Size: {x: 3.17, y: 2.17}
   m_EdgeRadius: 0
 --- !u!212 &1713406343
 SpriteRenderer:
@@ -2710,7 +2726,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+  m_Sprite: {fileID: 697638153, guid: b39e7fb4f03aab04ba533565443a8584, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3068,7 +3084,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 2a19f1695e36d4cf7a7f376d0fe60a39, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d45c34d964c26a84b9027441e978f303, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3088,7 +3104,7 @@ Transform:
   m_GameObject: {fileID: 1931611782}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.056727767, y: -0.0005405098, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3531,8 +3547,8 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
-    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "(She\u2019s in a hurry.) \u2026 Sort of a customer. I mostly just
       want to ask you a few questions."
@@ -3546,7 +3562,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "It\u2019s lunch hour, so I\u2019m in a bit of a hurry. Can you
@@ -4268,6 +4284,7 @@ GameObject:
   - component: {fileID: 2011243427}
   - component: {fileID: 2011243426}
   - component: {fileID: 2011243425}
+  - component: {fileID: 2011243429}
   m_Layer: 0
   m_Name: Chef
   m_TagString: Untagged
@@ -4289,7 +4306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1979688437}
   player: {fileID: 1713406337}
-  activationDistance: 2
+  activationDistance: 1
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   dialogueIndex: 21
@@ -4329,14 +4346,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.32, y: 10.62}
+    oldSize: {x: 3, y: 3.71}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.24, y: 7.6}
+  m_Size: {x: 3, y: 3.71}
   m_EdgeRadius: 0
 --- !u!212 &2011243427
 SpriteRenderer:
@@ -4379,7 +4396,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+  m_Sprite: {fileID: 408114675, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4399,12 +4416,27 @@ Transform:
   m_GameObject: {fileID: 2011243424}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.36, y: 3.95, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: 4.11, y: -0.51, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011243429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011243424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cdf33ae6ca4ce48ba867c7edf9ed9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enlargedScale: {x: 1.1, y: 1.1, z: 1.1}
+  normalSprite: {fileID: 408114675, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
+  hoverSprite: {fileID: 408114675, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
 --- !u!1 &2012909525
 GameObject:
   m_ObjectHideFlags: 0
