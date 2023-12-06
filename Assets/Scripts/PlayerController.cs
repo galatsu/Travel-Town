@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject inventoryPanel;
     public GameObject cashObject;
+    public GameObject sandwichObject;
+    public Sprite fishSprite;
     private bool isOpenInventory = false;
 
     public DialogueManager dialogueManager;
+    public DialogueManager fishermanDialogue;
 
 
     void Start()
@@ -33,6 +36,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             cashObject.SetActive(false);
+        }
+
+        if (fishermanDialogue.isReceivedFish && isOpenInventory)
+        {
+            sandwichObject.GetComponent<SpriteRenderer>().sprite = fishSprite;
         }
     }
 

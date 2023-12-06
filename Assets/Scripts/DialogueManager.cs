@@ -157,11 +157,17 @@ public class DialogueManager : MonoBehaviour
         {
             if (CheckRequirement(requirement.requirement))
             {
+                Debug.Log($"Requirement '{requirement.requirement}' met. Next node index: {requirement.nextNodeIndex}");
                 return requirement.nextNodeIndex;
             }
         }
 
-        return node.nextNode.Count > 0 ? node.nextNode[0] : -1; // Default or error case
+        int defaultNextNodeIndex = node.nextNode.Count > 0 ? node.nextNode[0] : -1;
+        Debug.Log(defaultNextNodeIndex != -1 
+            ? $"No requirements met. Proceeding to default next node index: {defaultNextNodeIndex}" 
+            : "No requirements met and no default next node defined.");
+
+        return defaultNextNodeIndex; // Default or error case
     }
 
     private bool CheckRequirement(string requirement)
