@@ -54,6 +54,8 @@ public class DialogueManager : MonoBehaviour
 
     public AudioSource audioSource;
 
+    private bool isHasCashandFish;
+
     void Start()
     {
         HideDialoguePanel();
@@ -65,6 +67,15 @@ public class DialogueManager : MonoBehaviour
         {
             waitingForUserInput = false;
             ShowDialogue(nextNodeIndex);
+        }
+
+        if(isReceivedCash && isReceivedFish)
+        {
+            isHasCashandFish = true;
+        }
+        else
+        {
+            isHasCashandFish = false;
         }
     }
 
@@ -157,9 +168,11 @@ public class DialogueManager : MonoBehaviour
     {
         switch (requirement)
         {
-            case "isHasCash":
+            case "Cash and fish":
+                return isHasCashandFish;
+            case "Cash":
                 return isReceivedCash;
-            case "isHasFish":
+            case "Fish":
                 return isReceivedFish;
             default:
                 Debug.LogWarning("Unknown requirement: " + requirement);

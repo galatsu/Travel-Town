@@ -1981,7 +1981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -4.6023865, y: 153}
+  m_AnchoredPosition: {x: -4.602417, y: 153}
   m_SizeDelta: {x: -826.4749, y: 141.5251}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1292821826
@@ -4082,6 +4082,55 @@ MonoBehaviour:
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "You\u2019ll have to fork it over yourself, then."
+    choices: []
+    nextNode: 
+    hasChoices: 0
+    isFinalNode: 0
+    isReceivedCash: 0
+    isReceivedFish: 0
+    typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
+    soundInterval: 4
+    requirements:
+    - requirement: Cash and fish
+      nextNodeIndex: 60
+    - requirement: Cash
+      nextNodeIndex: 0
+    - requirement: Fish
+      nextNodeIndex: 0
+  - speakerName: Chef
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: "Look at that. You\u2019ve actually got one."
+    choices: []
+    nextNode: 
+    hasChoices: 0
+    isFinalNode: 0
+    isReceivedCash: 0
+    isReceivedFish: 0
+    typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
+    soundInterval: 4
+    requirements: []
+  - speakerName: MC
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 0}
+    dialogueText: So can you cook it? Mayor said that was enough to pay for it.
+    choices: []
+    nextNode: 3e000000
+    hasChoices: 0
+    isFinalNode: 0
+    isReceivedCash: 0
+    isReceivedFish: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+  - speakerName: Chef
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: "Sure thing. Wait here for a minute, and it\u2019ll be out for
+      you in no time."
     choices: []
     nextNode: 
     hasChoices: 0
