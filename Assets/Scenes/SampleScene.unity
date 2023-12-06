@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cdf33ae6ca4ce48ba867c7edf9ed9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargedScale: {x: 1.1, y: 1.1, z: 1.1}
+  enlargedScale: {x: 0.5, y: 0.5, z: 0.5}
   normalSprite: {fileID: -36961239, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
   hoverSprite: {fileID: -1236830882, guid: b39e7fb4f03aab04ba533565443a8584, type: 3}
 --- !u!1 &1023664744
@@ -4434,9 +4434,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34cdf33ae6ca4ce48ba867c7edf9ed9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enlargedScale: {x: 1.1, y: 1.1, z: 1.1}
+  enlargedScale: {x: 0.5, y: 0.5, z: 0.5}
   normalSprite: {fileID: 408114675, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
-  hoverSprite: {fileID: 408114675, guid: 1bb95d707935c3947b6ed62e7e8ee57b, type: 3}
+  hoverSprite: {fileID: -756174596, guid: b39e7fb4f03aab04ba533565443a8584, type: 3}
 --- !u!1 &2012909525
 GameObject:
   m_ObjectHideFlags: 0
