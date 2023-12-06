@@ -46,15 +46,12 @@ public class DialogueManager : MonoBehaviour
     private int nextNodeIndex = 0;
     public List<DialogueNode> dialogueNodes;
 
-    public bool isReceivedCash = false;
-    public bool isReceivedFish = false;
-
     public Image fadeOverlay;
     public float fadeDuration = 1.0f;
 
     public AudioSource audioSource;
 
-    private bool isHasCashandFish;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -67,15 +64,6 @@ public class DialogueManager : MonoBehaviour
         {
             waitingForUserInput = false;
             ShowDialogue(nextNodeIndex);
-        }
-
-        if(isReceivedCash && isReceivedFish)
-        {
-            isHasCashandFish = true;
-        }
-        else
-        {
-            isHasCashandFish = false;
         }
     }
 
@@ -141,11 +129,11 @@ public class DialogueManager : MonoBehaviour
 
         if (node.isReceivedCash)
         {
-            isReceivedCash = true; // Handle cash received logic
+            gameManager.isReceivedCash = true; // Handle cash received logic
         }
         if (node.isReceivedFish)
         {
-            isReceivedFish = true;
+            gameManager.isReceivedFish = true;
         }
 
         // Additional handling for item interaction (if needed)
@@ -175,11 +163,11 @@ public class DialogueManager : MonoBehaviour
         switch (requirement)
         {
             case "Cash and fish":
-                return isHasCashandFish;
+                return gameManager.isHasCashandFish;
             case "Cash":
-                return isReceivedCash;
+                return gameManager.isReceivedCash;
             case "Fish":
-                return isReceivedFish;
+                return gameManager.isReceivedFish;
             default:
                 Debug.LogWarning("Unknown requirement: " + requirement);
                 return false;

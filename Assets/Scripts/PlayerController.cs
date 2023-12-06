@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,8 +15,7 @@ public class PlayerController : MonoBehaviour
     public Sprite fishSprite;
     private bool isOpenInventory = false;
 
-    public DialogueManager dialogueManager;
-    public DialogueManager fishermanDialogue;
+    public GameManager gameManager;
 
 
     void Start()
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         Inventory();
 
-        if (dialogueManager.isReceivedCash && isOpenInventory)
+        if (gameManager.isReceivedCash && isOpenInventory)
         {
             cashObject.SetActive(true);
         }
@@ -38,9 +38,9 @@ public class PlayerController : MonoBehaviour
             cashObject.SetActive(false);
         }
 
-        if (fishermanDialogue.isReceivedFish && isOpenInventory)
+        if (gameManager.isReceivedFish && isOpenInventory)
         {
-            sandwichObject.GetComponent<SpriteRenderer>().sprite = fishSprite;
+            sandwichObject.GetComponent<Image>().sprite = fishSprite;
         }
     }
 

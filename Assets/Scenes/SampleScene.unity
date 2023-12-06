@@ -2483,6 +2483,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1422179439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422179441}
+  - component: {fileID: 1422179440}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1422179440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422179439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d911908e4c913644d84d848a2d842d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReceivedCash: 0
+  isReceivedFish: 0
+  isHasCashandFish: 0
+--- !u!4 &1422179441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422179439}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 278.42126, y: 749.2519, z: -4.0357556}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509639247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2771,8 +2818,7 @@ MonoBehaviour:
   cashObject: {fileID: 1953679870}
   sandwichObject: {fileID: 428422182}
   fishSprite: {fileID: 21300000, guid: 8d65fcac53a130645ab82ad8d0d2e4ca, type: 3}
-  dialogueManager: {fileID: 1979688437}
-  fishermanDialogue: {fileID: 1905018590}
+  gameManager: {fileID: 1422179440}
 --- !u!50 &1713406336
 Rigidbody2D:
   serializedVersion: 4
@@ -3822,11 +3868,10 @@ MonoBehaviour:
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
-  isReceivedCash: 0
-  isReceivedFish: 0
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   audioSource: {fileID: 1905018589}
+  gameManager: {fileID: 1422179440}
 --- !u!4 &1905018591
 Transform:
   m_ObjectHideFlags: 0
@@ -4928,7 +4973,7 @@ MonoBehaviour:
     - requirement: Cash
       nextNodeIndex: 64
     - requirement: Fish
-      nextNodeIndex: 64
+      nextNodeIndex: 60
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4943,7 +4988,7 @@ MonoBehaviour:
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements:
-    - requirement: Cash and Fish
+    - requirement: Cash and fish
       nextNodeIndex: 61
     - requirement: Fish
       nextNodeIndex: 68
@@ -5061,11 +5106,10 @@ MonoBehaviour:
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
-  isReceivedCash: 0
-  isReceivedFish: 0
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   audioSource: {fileID: 1979688439}
+  gameManager: {fileID: 1422179440}
 --- !u!4 &1979688438
 Transform:
   m_ObjectHideFlags: 0
@@ -5713,3 +5757,4 @@ SceneRoots:
   - {fileID: 2011243428}
   - {fileID: 800809325}
   - {fileID: 1509639249}
+  - {fileID: 1422179441}
