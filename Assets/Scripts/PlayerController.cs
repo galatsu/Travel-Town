@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public DialogueManager dialogueManager;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
