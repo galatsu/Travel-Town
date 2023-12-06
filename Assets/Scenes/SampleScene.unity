@@ -813,9 +813,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 319228899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1490, y: 9}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 430, y: 9}
   m_SizeDelta: {x: 624, y: 760}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &495085188
@@ -2201,7 +2201,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.078431375}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3212,7 +3212,7 @@ MonoBehaviour:
   typingSpeed: 0.02
   dialogueNodes:
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "\u2026 Hello? Oh, really? Yes, yes, bring them in."
@@ -3226,7 +3226,7 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "Welcome, welcome to Petrichor. How can I help you, er\u2026? "
@@ -3240,7 +3240,7 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: Just call me detective.
@@ -3254,7 +3254,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: 'Ha! Well, detective, what brings you to our humble town? '
@@ -3268,7 +3268,7 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "I was born here, actually. At least, that\u2019s what I\u2019m
@@ -3283,7 +3283,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "A returning local? How wonderful! I\u2019m afraid I don\u2019t
@@ -3298,7 +3298,7 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "Does the name \u201CGregory Aarfman\u201D ring a bell?"
@@ -3312,7 +3312,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "\u2026"
@@ -3326,7 +3326,7 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "I\u2019m not sure. Does it?"
@@ -3340,8 +3340,8 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
-    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "I was hoping that it would. He\u2019s been missing since before
       I can remember, and I came here looking for clues as to his whereabouts. Our
@@ -3356,7 +3356,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "\u2026 Maybe. You know, I just remembered, I have something very
@@ -3371,8 +3371,8 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
-    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: (He changed his tune quick.) Oh. Well, I really need to talk to
       you.
@@ -3386,7 +3386,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: 'Can it wait until after I take my lunch?  '
@@ -3400,8 +3400,8 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
-    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "When will that be\u2026? (This guy\u2026) "
     choices: []
@@ -3414,7 +3414,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "Oh, in an hour or two. Hey, if you really want to help me out,
@@ -3430,8 +3430,8 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
-    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "(What am I, your errand boy?) \u2026 If that means you\u2019ll
       tell me what I need to know when I get back, then\u2026 sure. "
@@ -3445,7 +3445,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "Great, great! I\u2019ll see you when you get back."
@@ -3459,7 +3459,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Mayor
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: (Mayor exits)
@@ -3473,8 +3473,8 @@ MonoBehaviour:
     soundInterval: 5
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
-    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
     dialogueText: "\u2026 He seemed like he was in a hurry to get rid of me. I should
       get back as soon as I can.  "
@@ -3516,7 +3516,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "What\u2019s going on, who\u2019s this? A customer? Seat yourself
@@ -3561,8 +3561,8 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
-    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: Quick as you like.
     choices:
@@ -3578,7 +3578,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "Name\u2019s Gerry. Short for Germaine. I run Buck\u2019s Diner,
@@ -3593,7 +3593,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "It\u2019s alright. But it\u2019s no big city."
@@ -3607,7 +3607,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "\u2026 What kind of \u201Cspecial\u201D order? Is this gonna be
@@ -3622,7 +3622,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "A Grilled Trout Lunch. The mayor\u2013"
@@ -3636,7 +3636,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "Oh, I\u2019m sorry for your loss."
@@ -3650,7 +3650,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "\u2026 He\u2019s fine. Retired, and watches soaps all day back
@@ -3665,7 +3665,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "Sorry. I\u2019m sorry."
@@ -3679,7 +3679,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: 'Anyway. '
@@ -3693,7 +3693,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "It\u2019s a good gig. Makes people happy. Even if it\u2019s busy
@@ -3708,7 +3708,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: 'They could stand to appreciate you a bit more. '
@@ -3722,7 +3722,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "They sure could. I run the only diner in town. If they wanna complain
@@ -3738,7 +3738,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: What else?
@@ -3755,7 +3755,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: You wish it was?
@@ -3769,7 +3769,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: " It\u2019s so damn slow here, and it feels like nothing ever changes.
@@ -3785,7 +3785,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "It does seem like a pretty\u2026 relaxed place to live."
@@ -3799,7 +3799,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "That\u2019s a very nice way to put it. Probably better than it
@@ -3814,7 +3814,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: Why do you say that?
@@ -3828,7 +3828,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: ...
@@ -3842,7 +3842,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: (Maybe I pushed too hard.)
@@ -3856,7 +3856,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "\u2026 It just feels like no one even wants it to change. What
@@ -3871,7 +3871,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "I kind of have an obligation to stay, y\u2019know, what with my
@@ -3887,7 +3887,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: " \u2026 I understand."
@@ -3901,7 +3901,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: Sorry to dump all that on you.
@@ -3915,7 +3915,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: No need to apologize.
@@ -3929,7 +3929,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "I have to say, though\u2026You are somebody new. That never happens.
@@ -3946,7 +3946,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: Maybe that means something.
@@ -3960,7 +3960,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: ... Maybe, maybe.
@@ -3974,7 +3974,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "\u2026 Are you sure you don\u2019t remember anyone leaving? Not
@@ -3989,7 +3989,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "Nope. When you know everyone\u2019s face, you notice when they
@@ -4005,7 +4005,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: ... Right.
@@ -4019,7 +4019,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "That\u2019s on the menu. Not really a special."
@@ -4033,7 +4033,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: Well, the mayor sent me here to pick one up.
@@ -4047,7 +4047,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "You know, I\u2019d just love to help out, but we don\u2019t actually
@@ -4064,7 +4064,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "I don\u2019t really want to risk it. The mayor asked for trout."
@@ -4078,7 +4078,7 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: Chef
-    MCSprite: {fileID: 0}
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "You\u2019ll have to fork it over yourself, then."
@@ -4112,9 +4112,9 @@ MonoBehaviour:
     soundInterval: 4
     requirements: []
   - speakerName: MC
-    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
-    dialogueBG: {fileID: 0}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: So can you cook it? Mayor said that was enough to pay for it.
     choices: []
     nextNode: 3e000000
