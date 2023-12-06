@@ -39,6 +39,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI speakerNameText;
     public TextMeshProUGUI dialogueText; // Use Text if not using TextMeshPro
     public GameObject[] choiceButtons; // An array of choice buttons
+    public GameObject choicePanel;
     public GameObject dialoguePanel;
     public float typingSpeed = 0.05f;
 
@@ -52,6 +53,11 @@ public class DialogueManager : MonoBehaviour
     public AudioSource audioSource;
 
     public GameManager gameManager;
+
+    public Sprite mayorSprite;
+    public Sprite chefSprite;
+    public string mayorName;
+    public string chefName;
 
     void Start()
     {
@@ -81,9 +87,19 @@ public class DialogueManager : MonoBehaviour
         {
             ShowDialoguePanel();
 
-            speakerNameText.text = node.speakerName;
             MCImage.sprite = node.MCSprite;
+            //if (nodeIndex < 20)
+            //{
+            //    characterImage.sprite = mayorSprite;
+            //    speakerNameText.text = mayorName;
+            //}
+            //else
+            //{
+            //    characterImage.sprite = chefSprite;
+            //    speakerNameText.text = chefName;
+            //}
             characterImage.sprite = node.characterSprite;
+            speakerNameText.text = node.speakerName;
             dialogueBG.sprite = node.dialogueBG;
 
             StopAllCoroutines();
@@ -93,6 +109,7 @@ public class DialogueManager : MonoBehaviour
             {
                 for (int i = 0; i < node.choices.Count; i++)
                 {
+                    choicePanel.SetActive(true);
                     choiceButtons[i].SetActive(true);
                     choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = node.choices[i];
                     int nextNodeIndex = node.nextNode[i];
@@ -111,6 +128,7 @@ public class DialogueManager : MonoBehaviour
             {
                 for (int i = 0; i < choiceButtons.Length; i++)
                 {
+                    choicePanel.SetActive(false);
                     choiceButtons[i].SetActive(false);
                 }
 
