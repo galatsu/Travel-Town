@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public RequirementsData requirementsData;
 
+    public DialogueManager dialogueManager;
+
     void Awake()
     {
         if (Instance == null)
@@ -25,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        dialogueManager.ShowDialogue(0);
     }
 
     // Update is called once per frame

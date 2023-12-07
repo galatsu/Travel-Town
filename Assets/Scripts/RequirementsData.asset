@@ -16,8 +16,8 @@ MonoBehaviour:
   - name: Cash and fish
     isMet: 0
   - name: Cash
-    isMet: 0
-  - name: Fish
     isMet: 1
-  - name: Lunch
+  - name: Fish
     isMet: 0
+  - name: Lunch
+    isMet: 1

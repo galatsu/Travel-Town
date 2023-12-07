@@ -3442,6 +3442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requirementsData: {fileID: 11400000, guid: ed48725e08a48410ba53add9dd8b6a82, type: 2}
+  dialogueManager: {fileID: 1979688437}
 --- !u!4 &1422179441
 Transform:
   m_ObjectHideFlags: 0
