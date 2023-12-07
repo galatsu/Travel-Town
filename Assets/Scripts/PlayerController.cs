@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         inventoryPanel.SetActive(false);
+        gameManager.dialogueManager.ShowDialogue(0);
     }
 
     void Update()
