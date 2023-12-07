@@ -5537,12 +5537,12 @@ MonoBehaviour:
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: What else?
     choices:
-    - text: 
-      nextNodeIndex: 0
-    - text: 
-      nextNodeIndex: 0
-    - text: 
-      nextNodeIndex: 0
+    - text: Tell me about yourself.
+      nextNodeIndex: 25
+    - text: Tell me about Petrichor.
+      nextNodeIndex: 26
+    - text: Do you happen to have a trout?
+      nextNodeIndex: 27
     nextNode: 190000001a0000001b000000
     isFinalNode: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
