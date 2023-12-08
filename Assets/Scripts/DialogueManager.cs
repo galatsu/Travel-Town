@@ -5,6 +5,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
+public class DialogueChoice
+{
+    public string text;
+    public int nextNodeIndex;
+}
+
+[System.Serializable]
+public class DialogueResult
+{
+    public string result;
+    public bool isMet;
+}
+
+[System.Serializable]
 public class DialogueRequirement
 {
     public string requirement; // Requirement identifier
@@ -19,16 +33,14 @@ public class DialogueNode
     public Sprite characterSprite;
     public Sprite dialogueBG;
     public string dialogueText;
-    public List<string> choices;
+    public List<DialogueChoice> choices = new List<DialogueChoice>();
     public List<int> nextNode;
-    public bool hasChoices;
     public bool isFinalNode;
-    public bool isReceivedCash;
-    public bool isReceivedFish;
     public AudioClip typingSound;
     public int soundInterval = 4;
 
     public List<DialogueRequirement> requirements = new List<DialogueRequirement>();
+    public List<DialogueResult> results = new List<DialogueResult>();
 }
 
 public class DialogueManager : MonoBehaviour
@@ -54,10 +66,12 @@ public class DialogueManager : MonoBehaviour
 
     public GameManager gameManager;
 
-    public Sprite mayorSprite;
-    public Sprite chefSprite;
-    public string mayorName;
-    public string chefName;
+    public RequirementsData requirementsData;
+
+    private bool CheckRequirement(string requirement)
+    {
+        return requirementsData.CheckRequirement(requirement);
+    }
 
     void Start()
     {
@@ -88,16 +102,6 @@ public class DialogueManager : MonoBehaviour
             ShowDialoguePanel();
 
             MCImage.sprite = node.MCSprite;
-            //if (nodeIndex < 20)
-            //{
-            //    characterImage.sprite = mayorSprite;
-            //    speakerNameText.text = mayorName;
-            //}
-            //else
-            //{
-            //    characterImage.sprite = chefSprite;
-            //    speakerNameText.text = chefName;
-            //}
             characterImage.sprite = node.characterSprite;
             speakerNameText.text = node.speakerName;
             dialogueBG.sprite = node.dialogueBG;
@@ -105,14 +109,18 @@ public class DialogueManager : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(TypeSentence(node.dialogueText, node.typingSound, node.soundInterval));
 
-            if (node.hasChoices)
+            if (node.choices.Count != 0)
             {
                 for (int i = 0; i < node.choices.Count; i++)
                 {
                     choicePanel.SetActive(true);
                     choiceButtons[i].SetActive(true);
-                    choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = node.choices[i];
-                    int nextNodeIndex = node.nextNode[i];
+                    choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = node.choices[i].text;
+                    int nextNodeIndex = nextNodeToUse;
+                    if (node.requirements.Count == 0)
+                    {
+                        nextNodeIndex = node.choices[i].nextNodeIndex;
+                    }
                     choiceButtons[i].GetComponent<Button>().onClick.RemoveAllListeners();
                     choiceButtons[i].GetComponent<Button>().onClick.AddListener(() => ShowDialogue(nextNodeIndex));
                 }
@@ -145,16 +153,13 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        if (node.isReceivedCash)
+        if (node.results.Count != 0)
         {
-            gameManager.isReceivedCash = true; // Handle cash received logic
+            foreach (var result in node.results)
+            {
+                gameManager.UpdateRequirementStatus(result.result, result.isMet);
+            }
         }
-        if (node.isReceivedFish)
-        {
-            gameManager.isReceivedFish = true;
-        }
-
-        // Additional handling for item interaction (if needed)
     }
 
     private int GetNextNodeIndexBasedOnRequirements(DialogueNode node)
@@ -163,33 +168,11 @@ public class DialogueManager : MonoBehaviour
         {
             if (CheckRequirement(requirement.requirement))
             {
-                Debug.Log($"Requirement '{requirement.requirement}' met. Next node index: {requirement.nextNodeIndex}");
                 return requirement.nextNodeIndex;
             }
         }
 
-        int defaultNextNodeIndex = node.nextNode.Count > 0 ? node.nextNode[0] : -1;
-        Debug.Log(defaultNextNodeIndex != -1 
-            ? $"No requirements met. Proceeding to default next node index: {defaultNextNodeIndex}" 
-            : "No requirements met and no default next node defined.");
-
-        return defaultNextNodeIndex; // Default or error case
-    }
-
-    private bool CheckRequirement(string requirement)
-    {
-        switch (requirement)
-        {
-            case "Cash and fish":
-                return gameManager.isHasCashandFish;
-            case "Cash":
-                return gameManager.isReceivedCash;
-            case "Fish":
-                return gameManager.isReceivedFish;
-            default:
-                Debug.LogWarning("Unknown requirement: " + requirement);
-                return false;
-        }
+        return node.nextNode.Count > 0 ? node.nextNode[0] : -1; // Default or error case
     }
 
     IEnumerator TypeSentence(string sentence, AudioClip typingSound, int soundInterval)

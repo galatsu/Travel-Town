@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static RequirementsData;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public bool isReceivedCash = false;
-    public bool isReceivedFish = false;
-    
-    public bool isHasCashandFish = false;
-    
+    public RequirementsData requirementsData;
+
+    public DialogueManager dialogueManager;
+
     void Awake()
     {
         if (Instance == null)
@@ -33,13 +33,26 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isReceivedCash && isReceivedFish)
+        if (requirementsData.CheckRequirement("Cash") && requirementsData.CheckRequirement("Fish"))
         {
-            isHasCashandFish = true;
+            UpdateRequirementStatus("Cash and fish", true);
         }
         else
         {
-            isHasCashandFish = false;
+            UpdateRequirementStatus("Cash and fish", false);
+        }
+    }
+
+    public void UpdateRequirementStatus(string requirementName, bool status)
+    {
+        RequirementsData.Requirement requirement = requirementsData.requirements.Find(r => r.name == requirementName);
+        if (requirement != null)
+        {
+            requirement.isMet = status;
+        }
+        else
+        {
+            Debug.LogWarning("Requirement not found: " + requirementName);
         }
     }
 }

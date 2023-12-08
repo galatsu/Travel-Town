@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject cashObject;
     public GameObject sandwichObject;
     public Sprite fishSprite;
+    public Sprite lunchSprite;
     private bool isOpenInventory = false;
 
     public GameManager gameManager;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         inventoryPanel.SetActive(false);
+        gameManager.dialogueManager.ShowDialogue(0);
     }
 
     void Update()
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         Inventory();
 
-        if (gameManager.isReceivedCash && isOpenInventory)
+        if (gameManager.requirementsData.CheckRequirement("Cash") && isOpenInventory)
         {
             cashObject.SetActive(true);
         }
@@ -38,9 +40,13 @@ public class PlayerController : MonoBehaviour
             cashObject.SetActive(false);
         }
 
-        if (gameManager.isReceivedFish && isOpenInventory)
+        if (gameManager.requirementsData.CheckRequirement("Fish") && isOpenInventory)
         {
             sandwichObject.GetComponent<Image>().sprite = fishSprite;
+        }
+        else if (gameManager.requirementsData.CheckRequirement("Lunch") && isOpenInventory)
+        {
+            sandwichObject.GetComponent<Image>().sprite = lunchSprite;
         }
     }
 

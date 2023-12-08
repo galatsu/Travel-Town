@@ -1761,6 +1761,7 @@ MonoBehaviour:
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   dialogueIndex: 0
+  movementThreshold: 0
 --- !u!114 &696321362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1829,6 +1830,7 @@ MonoBehaviour:
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   dialogueIndex: 0
+  movementThreshold: 0
 --- !u!61 &800809323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1858,7 +1860,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2566,6 +2568,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1191942055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1191942057}
+  - component: {fileID: 1191942056}
+  m_Layer: 0
+  m_Name: Obstacle (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1191942056
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191942055}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.7814329, y: 0.40265572}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9211249, y: 1.3871367}
+  m_EdgeRadius: 0
+--- !u!4 &1191942057
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191942055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.37, y: 1.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262607263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,6 +2898,417 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334456790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334456793}
+  - component: {fileID: 1334456792}
+  - component: {fileID: 1334456791}
+  m_Layer: 0
+  m_Name: Mayor2 DialogueManager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1334456791
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334456790}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e57d3b5edf811a74ca0b7c38a6c4c3b8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1334456792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334456790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a26d691ed0a546acba6f6d4106a64af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MCImage: {fileID: 495085189}
+  characterImage: {fileID: 597460469}
+  dialogueBG: {fileID: 458268831}
+  speakerNameText: {fileID: 225606731}
+  dialogueText: {fileID: 478227684}
+  choiceButtons:
+  - {fileID: 1146304394}
+  - {fileID: 2107326909}
+  - {fileID: 1023664744}
+  choicePanel: {fileID: 1962411736}
+  dialoguePanel: {fileID: 319228898}
+  typingSpeed: 0.02
+  dialogueNodes:
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "\u2026 Hello? Oh, really? Yes, yes, bring them in."
+    choices: []
+    nextNode: 01000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "Welcome, welcome to Petrichor. How can I help you, er\u2026? "
+    choices: []
+    nextNode: 02000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: Just call me detective.
+    choices: []
+    nextNode: 03000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: 'Ha! Well, detective, what brings you to our humble town? '
+    choices: []
+    nextNode: 04000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "I was born here, actually. At least, that\u2019s what I\u2019m
+      told. It\u2019s not on my birth certificate."
+    choices: []
+    nextNode: 05000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "A returning local? How wonderful! I\u2019m afraid I don\u2019t
+      recognize you, though. Do I know someone in your family?"
+    choices: []
+    nextNode: 06000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "Does the name \u201CGregory Aarfman\u201D ring a bell?"
+    choices: []
+    nextNode: 07000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "\u2026"
+    choices: []
+    nextNode: 08000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "I\u2019m not sure. Does it?"
+    choices: []
+    nextNode: 09000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "I was hoping that it would. He\u2019s been missing since before
+      I can remember, and I came here looking for clues as to his whereabouts. Our
+      old house was somewhere in the woods, wasn\u2019t it? "
+    choices: []
+    nextNode: 0a000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "\u2026 Maybe. You know, I just remembered, I have something very
+      important to attend to right now. If you wouldn\u2019t mind\u2026"
+    choices: []
+    nextNode: 0b000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: (He changed his tune quick.) Oh. Well, I really need to talk to
+      you.
+    choices: []
+    nextNode: 0c000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: 'Can it wait until after I take my lunch?  '
+    choices: []
+    nextNode: 0d000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "When will that be\u2026? (This guy\u2026) "
+    choices: []
+    nextNode: 0e000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "Oh, in an hour or two. Hey, if you really want to help me out,
+      you could pick it up for me. Here, I\u2019ll give you some pocket change. Could
+      you make it a Grilled Trout Lunch? From Buck\u2019s."
+    choices: []
+    nextNode: 0f000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "(What am I, your errand boy?) \u2026 If that means you\u2019ll
+      tell me what I need to know when I get back, then\u2026 sure. "
+    choices: []
+    nextNode: 10000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "Great, great! I\u2019ll see you when you get back."
+    choices: []
+    nextNode: 11000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Mayor
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: (Mayor exits)
+    choices: []
+    nextNode: 12000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
+    soundInterval: 5
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: "\u2026 He seemed like he was in a hurry to get rid of me. I should
+      get back as soon as I can.  "
+    choices: []
+    nextNode: 13000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: 
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: f42ce73fbd8ad40479ce934c6affe076, type: 3}
+    dialogueText: '(OBTAIN: wad of cash)'
+    choices: []
+    nextNode: 14000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 1caa4ddc4fa4142f1911b6e3aeed738a, type: 3}
+    soundInterval: 20
+    requirements: []
+    results:
+    - result: Cash
+      isMet: 1
+  fadeOverlay: {fileID: 2012909527}
+  fadeDuration: 1
+  audioSource: {fileID: 1334456791}
+  gameManager: {fileID: 1422179440}
+  requirementsData: {fileID: 11400000, guid: ed48725e08a48410ba53add9dd8b6a82, type: 2}
+--- !u!4 &1334456793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334456790}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 995.0229, y: 461.65952, z: 1.7787904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375055895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,9 +3441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d911908e4c913644d84d848a2d842d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isReceivedCash: 0
-  isReceivedFish: 0
-  isHasCashandFish: 0
+  requirementsData: {fileID: 11400000, guid: ed48725e08a48410ba53add9dd8b6a82, type: 2}
+  dialogueManager: {fileID: 1979688437}
 --- !u!4 &1422179441
 Transform:
   m_ObjectHideFlags: 0
@@ -3257,6 +3746,7 @@ MonoBehaviour:
   cashObject: {fileID: 1953679870}
   sandwichObject: {fileID: 428422182}
   fishSprite: {fileID: 21300000, guid: 8d65fcac53a130645ab82ad8d0d2e4ca, type: 3}
+  lunchSprite: {fileID: 21300000, guid: 63a1298bf733f0a4c8c779ebbda0835b, type: 3}
   gameManager: {fileID: 1422179440}
 --- !u!50 &1713406336
 Rigidbody2D:
@@ -4013,13 +4503,11 @@ MonoBehaviour:
     dialogueText: "Never seen you around here before. We getting tourists now\u2026?"
     choices: []
     nextNode: 01000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4027,30 +4515,29 @@ MonoBehaviour:
     dialogueText: "No, I\u2019m\u2026 a local."
     choices: []
     nextNode: 02000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 2120918edde97f943a3b3cc7b078ba1d, type: 3}
     dialogueText: Uh huh. Well, what can I do for you?
     choices:
-    - Tell me about yourself.
-    - Tell me about Petrichor.
-    - Do you happen to have a trout?
+    - text: Tell me about yourself.
+      nextNodeIndex: 3
+    - text: Tell me about Petrichor.
+      nextNodeIndex: 4
+    - text: Do you happen to have a trout?
+      nextNodeIndex: 5
     nextNode: 030000000400000005000000
-    hasChoices: 1
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: 
     MCSprite: {fileID: 0}
     characterSprite: {fileID: 0}
@@ -4058,13 +4545,11 @@ MonoBehaviour:
     dialogueText: 
     choices: []
     nextNode: 
-    hasChoices: 0
-    isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
+    isFinalNode: 1
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: 
     MCSprite: {fileID: 0}
     characterSprite: {fileID: 0}
@@ -4072,13 +4557,11 @@ MonoBehaviour:
     dialogueText: 
     choices: []
     nextNode: 
-    hasChoices: 0
-    isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
+    isFinalNode: 1
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4087,13 +4570,11 @@ MonoBehaviour:
       made it to me yet. At all."
     choices: []
     nextNode: 06000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4101,13 +4582,11 @@ MonoBehaviour:
     dialogueText: Is there any way I can help with that? I need one.
     choices: []
     nextNode: 07000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4115,29 +4594,27 @@ MonoBehaviour:
     dialogueText: Have you got any bait on you? The trout here are very picky.
     choices: []
     nextNode: 08000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 2120918edde97f943a3b3cc7b078ba1d, type: 3}
     dialogueText: 
     choices:
-    - Yes. (Give away the sandwich)
-    - No, no way.
-    nextNode: 0900000000000000
-    hasChoices: 1
+    - text: (Give a way the sandwich.)
+      nextNodeIndex: 9
+    - text: No, no way.
+      nextNodeIndex: 21
+    nextNode: 0900000015000000
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4145,13 +4622,11 @@ MonoBehaviour:
     dialogueText: Would this work?
     choices: []
     nextNode: 0a000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4159,13 +4634,11 @@ MonoBehaviour:
     dialogueText: "Ooh. Looks delicious. Sure, I\u2019ll give it a try."
     choices: []
     nextNode: 0b000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4173,13 +4646,11 @@ MonoBehaviour:
     dialogueText: Well, look at that. Your sandwich did the trick.
     choices: []
     nextNode: 0c000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4187,13 +4658,11 @@ MonoBehaviour:
     dialogueText: "Great. Thank you. I\u2019ll just take that off your hands, then."
     choices: []
     nextNode: 0d000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4202,13 +4671,11 @@ MonoBehaviour:
       Stingy, guy."
     choices: []
     nextNode: 0e000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4216,13 +4683,11 @@ MonoBehaviour:
     dialogueText: "\u2026 Oh. Sorry about that. It\u2019s just that I\u2013"
     choices: []
     nextNode: 0f000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4231,13 +4696,11 @@ MonoBehaviour:
       a trout person."
     choices: []
     nextNode: 10000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4245,13 +4708,11 @@ MonoBehaviour:
     dialogueText: "(Sheesh.)  \u2026 Thanks."
     choices: []
     nextNode: 11000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4259,13 +4720,11 @@ MonoBehaviour:
     dialogueText: See you around.
     choices: []
     nextNode: 12000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Fisherman
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4273,13 +4732,11 @@ MonoBehaviour:
     dialogueText: Hasta la vista.
     choices: []
     nextNode: 13000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: 
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4287,13 +4744,13 @@ MonoBehaviour:
     dialogueText: (OBTAIN FISH, LOSE SANDWICH)
     choices: []
     nextNode: 14000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 1
     typingSound: {fileID: 8300000, guid: 1caa4ddc4fa4142f1911b6e3aeed738a, type: 3}
-    soundInterval: 40
+    soundInterval: 15
     requirements: []
+    results:
+    - result: Fish
+      isMet: 1
   - speakerName: 
     MCSprite: {fileID: 0}
     characterSprite: {fileID: 0}
@@ -4301,21 +4758,28 @@ MonoBehaviour:
     dialogueText: 
     choices: []
     nextNode: 
-    hasChoices: 0
     isFinalNode: 1
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
+  - speakerName: Fisherman
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 2120918edde97f943a3b3cc7b078ba1d, type: 3}
+    dialogueText: Alright.
+    choices: []
+    nextNode: 14000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   audioSource: {fileID: 1905018589}
   gameManager: {fileID: 1422179440}
-  mayorSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
-  chefSprite: {fileID: 267571615, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
-  mayorName: Fisherman
-  chefName: Fisherman
+  requirementsData: {fileID: 11400000, guid: ed48725e08a48410ba53add9dd8b6a82, type: 2}
 --- !u!4 &1905018591
 Transform:
   m_ObjectHideFlags: 0
@@ -4577,7 +5041,7 @@ GameObject:
   - component: {fileID: 1979688437}
   - component: {fileID: 1979688439}
   m_Layer: 0
-  m_Name: DialogueManager
+  m_Name: Mayor1 and Chef DialogueManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4615,13 +5079,11 @@ MonoBehaviour:
     dialogueText: "\u2026 Hello? Oh, really? Yes, yes, bring them in."
     choices: []
     nextNode: 01000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4629,13 +5091,11 @@ MonoBehaviour:
     dialogueText: "Welcome, welcome to Petrichor. How can I help you, er\u2026? "
     choices: []
     nextNode: 02000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4643,13 +5103,11 @@ MonoBehaviour:
     dialogueText: Just call me detective.
     choices: []
     nextNode: 03000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4657,13 +5115,11 @@ MonoBehaviour:
     dialogueText: 'Ha! Well, detective, what brings you to our humble town? '
     choices: []
     nextNode: 04000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4672,13 +5128,11 @@ MonoBehaviour:
       told. It\u2019s not on my birth certificate."
     choices: []
     nextNode: 05000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4687,13 +5141,11 @@ MonoBehaviour:
       recognize you, though. Do I know someone in your family?"
     choices: []
     nextNode: 06000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4701,13 +5153,11 @@ MonoBehaviour:
     dialogueText: "Does the name \u201CGregory Aarfman\u201D ring a bell?"
     choices: []
     nextNode: 07000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4715,13 +5165,11 @@ MonoBehaviour:
     dialogueText: "\u2026"
     choices: []
     nextNode: 08000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4729,13 +5177,11 @@ MonoBehaviour:
     dialogueText: "I\u2019m not sure. Does it?"
     choices: []
     nextNode: 09000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4745,13 +5191,11 @@ MonoBehaviour:
       old house was somewhere in the woods, wasn\u2019t it? "
     choices: []
     nextNode: 0a000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4760,13 +5204,11 @@ MonoBehaviour:
       important to attend to right now. If you wouldn\u2019t mind\u2026"
     choices: []
     nextNode: 0b000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4775,13 +5217,11 @@ MonoBehaviour:
       you.
     choices: []
     nextNode: 0c000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4789,13 +5229,11 @@ MonoBehaviour:
     dialogueText: 'Can it wait until after I take my lunch?  '
     choices: []
     nextNode: 0d000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4803,13 +5241,11 @@ MonoBehaviour:
     dialogueText: "When will that be\u2026? (This guy\u2026) "
     choices: []
     nextNode: 0e000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4819,13 +5255,11 @@ MonoBehaviour:
       you make it a Grilled Trout Lunch? From Buck\u2019s."
     choices: []
     nextNode: 0f000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4834,13 +5268,11 @@ MonoBehaviour:
       tell me what I need to know when I get back, then\u2026 sure. "
     choices: []
     nextNode: 10000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4848,13 +5280,11 @@ MonoBehaviour:
     dialogueText: "Great, great! I\u2019ll see you when you get back."
     choices: []
     nextNode: 11000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Mayor
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4862,13 +5292,11 @@ MonoBehaviour:
     dialogueText: (Mayor exits)
     choices: []
     nextNode: 12000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 55da74ed1d55aaf49a0d7fde6e30939a, type: 3}
     soundInterval: 5
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4877,13 +5305,11 @@ MonoBehaviour:
       get back as soon as I can.  "
     choices: []
     nextNode: 13000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: 
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4891,13 +5317,13 @@ MonoBehaviour:
     dialogueText: '(OBTAIN: wad of cash)'
     choices: []
     nextNode: 14000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 1
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 1caa4ddc4fa4142f1911b6e3aeed738a, type: 3}
     soundInterval: 20
     requirements: []
+    results:
+    - result: Cash
+      isMet: 1
   - speakerName: 
     MCSprite: {fileID: 0}
     characterSprite: {fileID: 0}
@@ -4905,13 +5331,11 @@ MonoBehaviour:
     dialogueText: 
     choices: []
     nextNode: 
-    hasChoices: 0
     isFinalNode: 1
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4920,13 +5344,11 @@ MonoBehaviour:
       at the bar. "
     choices: []
     nextNode: 16000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4935,13 +5357,11 @@ MonoBehaviour:
       want to ask you a few questions."
     choices: []
     nextNode: 17000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4950,30 +5370,29 @@ MonoBehaviour:
       make it quick? "
     choices: []
     nextNode: 18000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: Quick as you like.
     choices:
-    - Tell me about Yourself.
-    - Tell me about Petrichor.
-    - Could I trouble you to make a special order?
+    - text: Tell me about yourself.
+      nextNodeIndex: 25
+    - text: Tell me about Petrichor.
+      nextNodeIndex: 26
+    - text: Could I trouble you to make a special order?
+      nextNodeIndex: 27
     nextNode: 190000001a0000001b000000
-    hasChoices: 1
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4982,13 +5401,11 @@ MonoBehaviour:
       \u2018s a family joint. My old man passed it down to me."
     choices: []
     nextNode: 1d000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -4996,13 +5413,11 @@ MonoBehaviour:
     dialogueText: "It\u2019s alright. But it\u2019s no big city."
     choices: []
     nextNode: 25000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5011,13 +5426,11 @@ MonoBehaviour:
       a hassle?"
     choices: []
     nextNode: 1c000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5025,13 +5438,11 @@ MonoBehaviour:
     dialogueText: "A Grilled Trout Lunch. The mayor\u2013"
     choices: []
     nextNode: 37000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5039,13 +5450,11 @@ MonoBehaviour:
     dialogueText: "Oh, I\u2019m sorry for your loss."
     choices: []
     nextNode: 1e000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5054,13 +5463,11 @@ MonoBehaviour:
       at home. Way to assume, pal."
     choices: []
     nextNode: 1f000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5068,13 +5475,11 @@ MonoBehaviour:
     dialogueText: "Sorry. I\u2019m sorry."
     choices: []
     nextNode: 20000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5082,13 +5487,11 @@ MonoBehaviour:
     dialogueText: 'Anyway. '
     choices: []
     nextNode: 21000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5097,13 +5500,11 @@ MonoBehaviour:
       as hell, and they all complain all the time, over nothing."
     choices: []
     nextNode: 22000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5111,13 +5512,11 @@ MonoBehaviour:
     dialogueText: 'They could stand to appreciate you a bit more. '
     choices: []
     nextNode: 23000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5127,30 +5526,29 @@ MonoBehaviour:
       this ship. And I\u2019m one hell of a captain. "
     choices: []
     nextNode: 24000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: What else?
     choices:
-    - Tell me about yourself.
-    - Tell me about Petrichor.
-    - Could I trouble you to make a special order?
+    - text: Tell me about yourself.
+      nextNodeIndex: 25
+    - text: Tell me about Petrichor.
+      nextNodeIndex: 26
+    - text: Do you happen to have a trout?
+      nextNodeIndex: 27
     nextNode: 190000001a0000001b000000
-    hasChoices: 1
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5158,13 +5556,11 @@ MonoBehaviour:
     dialogueText: You wish it was?
     choices: []
     nextNode: 26000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5174,13 +5570,11 @@ MonoBehaviour:
       day. "
     choices: []
     nextNode: 27000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5188,13 +5582,11 @@ MonoBehaviour:
     dialogueText: "It does seem like a pretty\u2026 relaxed place to live."
     choices: []
     nextNode: 28000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5203,13 +5595,11 @@ MonoBehaviour:
       deserves."
     choices: []
     nextNode: 29000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5217,13 +5607,11 @@ MonoBehaviour:
     dialogueText: Why do you say that?
     choices: []
     nextNode: 2a000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5231,13 +5619,11 @@ MonoBehaviour:
     dialogueText: ...
     choices: []
     nextNode: 2b000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5245,13 +5631,11 @@ MonoBehaviour:
     dialogueText: (Maybe I pushed too hard.)
     choices: []
     nextNode: 2c000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5260,13 +5644,11 @@ MonoBehaviour:
       about me? What about what I want?"
     choices: []
     nextNode: 2d000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5276,13 +5658,11 @@ MonoBehaviour:
       But maybe I\u2019d like it if it was different."
     choices: []
     nextNode: 2e000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5290,13 +5670,11 @@ MonoBehaviour:
     dialogueText: " \u2026 I understand."
     choices: []
     nextNode: 2f000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5304,13 +5682,11 @@ MonoBehaviour:
     dialogueText: Sorry to dump all that on you.
     choices: []
     nextNode: 30000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5318,13 +5694,11 @@ MonoBehaviour:
     dialogueText: No need to apologize.
     choices: []
     nextNode: 31000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5335,13 +5709,11 @@ MonoBehaviour:
       before."
     choices: []
     nextNode: 32000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5349,13 +5721,11 @@ MonoBehaviour:
     dialogueText: Maybe that means something.
     choices: []
     nextNode: 33000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5363,13 +5733,11 @@ MonoBehaviour:
     dialogueText: ... Maybe, maybe.
     choices: []
     nextNode: 34000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5378,13 +5746,11 @@ MonoBehaviour:
       ever?"
     choices: []
     nextNode: 35000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5394,13 +5760,11 @@ MonoBehaviour:
       if someone disappeared, there\u2019d be a huge stink. Right?"
     choices: []
     nextNode: 36000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5408,13 +5772,11 @@ MonoBehaviour:
     dialogueText: ... Right.
     choices: []
     nextNode: 24000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5422,13 +5784,11 @@ MonoBehaviour:
     dialogueText: "That\u2019s on the menu. Not really a special."
     choices: []
     nextNode: 38000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5436,13 +5796,11 @@ MonoBehaviour:
     dialogueText: Well, the mayor sent me here to pick one up.
     choices: []
     nextNode: 39000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5453,13 +5811,11 @@ MonoBehaviour:
       I just make you that instead? "
     choices: []
     nextNode: 3a000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5467,33 +5823,23 @@ MonoBehaviour:
     dialogueText: "I don\u2019t really want to risk it. The mayor asked for trout."
     choices: []
     nextNode: 3b000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "You\u2019ll have to fork it over yourself, then."
     choices: []
-    nextNode: 3c0000004000000040000000
-    hasChoices: 0
+    nextNode: 4f000000
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
-    requirements:
-    - requirement: Cash and fish
-      nextNodeIndex: 60
-    - requirement: Cash
-      nextNodeIndex: 64
-    - requirement: Fish
-      nextNodeIndex: 60
+    requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5501,10 +5847,7 @@ MonoBehaviour:
     dialogueText: "Look at that. You\u2019ve actually got one."
     choices: []
     nextNode: 3d00000044000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements:
@@ -5512,6 +5855,7 @@ MonoBehaviour:
       nextNodeIndex: 61
     - requirement: Fish
       nextNodeIndex: 68
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5519,13 +5863,11 @@ MonoBehaviour:
     dialogueText: So can you cook it? Mayor said that was enough to pay for it.
     choices: []
     nextNode: 3e000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5534,27 +5876,23 @@ MonoBehaviour:
       you in no time."
     choices: []
     nextNode: 3f000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: "Thanks, uh\u2026"
     choices: []
-    nextNode: 
-    hasChoices: 0
+    nextNode: 46000000
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5562,13 +5900,11 @@ MonoBehaviour:
     dialogueText: "I haven\u2019t got a trout."
     choices: []
     nextNode: 41000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5577,13 +5913,11 @@ MonoBehaviour:
       Doing what they always do."
     choices: []
     nextNode: 42000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: MC
     MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
@@ -5591,13 +5925,11 @@ MonoBehaviour:
     dialogueText: "(... What a pain. But I guess it can\u2019t be helped.)"
     choices: []
     nextNode: 43000000
-    hasChoices: 0
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: 
     MCSprite: {fileID: 0}
     characterSprite: {fileID: 0}
@@ -5605,35 +5937,172 @@ MonoBehaviour:
     dialogueText: 
     choices: []
     nextNode: 
-    hasChoices: 0
     isFinalNode: 1
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 0}
     soundInterval: 4
     requirements: []
+    results: []
   - speakerName: Chef
     MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
     dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
     dialogueText: Oh you only got trout! No money! GTFO
     choices: []
-    nextNode: 
-    hasChoices: 0
+    nextNode: 45000000
     isFinalNode: 0
-    isReceivedCash: 0
-    isReceivedFish: 0
     typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
     soundInterval: 4
     requirements: []
+    results: []
+  - speakerName: 
+    MCSprite: {fileID: 0}
+    characterSprite: {fileID: 0}
+    dialogueBG: {fileID: 0}
+    dialogueText: 
+    choices: []
+    nextNode: 
+    isFinalNode: 1
+    typingSound: {fileID: 0}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Chef
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 2120918edde97f943a3b3cc7b078ba1d, type: 3}
+    dialogueText: 'Gerry. '
+    choices: []
+    nextNode: 47000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 2120918edde97f943a3b3cc7b078ba1d, type: 3}
+    dialogueText: Right. Thanks, Gerry.
+    choices: []
+    nextNode: 48000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: (cooking sfx? lol)
+    choices: []
+    nextNode: 49000000
+    isFinalNode: 0
+    typingSound: {fileID: 0}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Chef
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: One Grilled Trout Lunch, coming right up!
+    choices: []
+    nextNode: 4a000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 611f16dbb5684db46a247a2c21df2883, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: 
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: (OBTAIN LUNCH, LOSE FISH AND CASH)
+    choices: []
+    nextNode: 4b000000
+    isFinalNode: 0
+    typingSound: {fileID: 0}
+    soundInterval: 4
+    requirements: []
+    results:
+    - result: Lunch
+      isMet: 1
+    - result: Cash
+      isMet: 0
+    - result: Fish
+      isMet: 0
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: Thanks for your time.
+    choices: []
+    nextNode: 4c000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 013189e6296d492419978a64d2140243, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: Chef
+    MCSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: ORDER UP!
+    choices: []
+    nextNode: 4d000000
+    isFinalNode: 0
+    typingSound: {fileID: 8300000, guid: 291c4873be0ee4f4590b7f9b230ea3e2, type: 3}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: "(She\u2019s already forgotten about me\u2026)"
+    choices: []
+    nextNode: 4e000000
+    isFinalNode: 0
+    typingSound: {fileID: 0}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: 
+    MCSprite: {fileID: 0}
+    characterSprite: {fileID: 0}
+    dialogueBG: {fileID: 0}
+    dialogueText: 
+    choices: []
+    nextNode: 
+    isFinalNode: 1
+    typingSound: {fileID: 0}
+    soundInterval: 4
+    requirements: []
+    results: []
+  - speakerName: MC
+    MCSprite: {fileID: 1743826682, guid: 605e46ed4ba223a47adb8897e75f06ca, type: 3}
+    characterSprite: {fileID: -878246928, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
+    dialogueBG: {fileID: 21300000, guid: 467b757189ac16b45a1cd9557bcb29ea, type: 3}
+    dialogueText: 
+    choices:
+    - text: (Give away the trout.)
+      nextNodeIndex: 64
+    - text: "I haven\u2019t got a trout."
+      nextNodeIndex: 64
+    nextNode: 4000000040000000
+    isFinalNode: 0
+    typingSound: {fileID: 0}
+    soundInterval: 4
+    requirements:
+    - requirement: Fish
+      nextNodeIndex: 60
+    results: []
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   audioSource: {fileID: 1979688439}
   gameManager: {fileID: 1422179440}
-  mayorSprite: {fileID: -2022944724, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
-  chefSprite: {fileID: -1370160963, guid: 3ab16c544c4934b288ee861cf392a843, type: 3}
-  mayorName: Mayor
-  chefName: Chef
+  requirementsData: {fileID: 11400000, guid: ed48725e08a48410ba53add9dd8b6a82, type: 2}
 --- !u!4 &1979688438
 Transform:
   m_ObjectHideFlags: 0
@@ -5783,6 +6252,7 @@ MonoBehaviour:
   fadeOverlay: {fileID: 2012909527}
   fadeDuration: 1
   dialogueIndex: 21
+  movementThreshold: 0
 --- !u!61 &2011243426
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6278,6 +6748,7 @@ SceneRoots:
   - {fileID: 1375055898}
   - {fileID: 1979688438}
   - {fileID: 1905018591}
+  - {fileID: 1334456793}
   - {fileID: 696321360}
   - {fileID: 2011243428}
   - {fileID: 800809325}
@@ -6287,3 +6758,4 @@ SceneRoots:
   - {fileID: 489996351}
   - {fileID: 1171822246}
   - {fileID: 1262607265}
+  - {fileID: 1191942057}
